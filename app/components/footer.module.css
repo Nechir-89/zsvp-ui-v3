@@ -1,0 +1,63 @@
+.contentWraper {
+  display: flex;
+}
+
+.col1, .col2 {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.col2 {
+  row-gap: 12px;
+}
+
+
+.contactWraper {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.contactWraper:hover {
+  color: var(--light-orange);
+}
+
+.footerNavItem {
+  font-size: 1rem;
+  letter-spacing: normal;
+}
+
+.social-icons-and-map-icon {
+  display: flex;
+  column-gap: 8px;
+}
+
+.social-icons {
+  display: flex;
+  column-gap: 12px;
+}
+
+.contentWraperFooter2 {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+}
+
+.contentWraperFooter2>div {
+  flex-basis: 100%;
+  align-self: center;
+  margin: 0;
+}
+
+.TechCampLogo {
+  justify-self: end;
+}
+
+@media only screen and (max-width: 600px) {
+  .contentWraper {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+}

@@ -1,0 +1,63 @@
+.card {
+  max-width: 500px;
+}
+
+.slide {
+  width: 400px;
+  padding: 2rem;
+}
+
+.slideContentWraper {
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: -15px 8px 30px rgba(19, 87, 108, 0.35);
+}
+
+.body {
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  display: inline;
+  color: var(--black);
+  font-family: var(--caveat-font);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  word-spacing: 0;
+  letter-spacing: -0.9px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.endQuotes,
+.startQuotes {
+  margin-top: -8px;
+}
+
+.endQuotes {
+  /* rotate: 180deg; */
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+}
+
+.autherDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatarWraper {
+  position: relative;
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.avatar {
+  border: 2.5px solid var(--light-orange);
+  border-radius: 50%;
+}

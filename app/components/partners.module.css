@@ -1,0 +1,52 @@
+.contentWraper {
+  max-width: 1122px;
+}
+
+.title {
+  color: var(--light-orange);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.partnersWraper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem
+}
+
+.descWraper{
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  color: var(--black1);
+  font-size: 24px;
+  max-width: 80ch;
+  font-weight: 550;
+  text-align: center;
+  font-family: var(--caveat-font);
+  margin-bottom: 3rem;
+}
+
+.partnerCard{
+  position: relative;
+  width: 160px;
+  height: 130px;
+}
+
+@media only screen and (max-width: 600px){
+  .partnersWraper {
+    column-gap: 2rem;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  .partnerCard{
+    width: 120px;
+    height: 100px;
+  }
+}

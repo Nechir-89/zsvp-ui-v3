@@ -1,0 +1,86 @@
+.newsPage {
+  padding-top: 140px;
+  padding-bottom: 3rem;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.newsPage h3 {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.cardsWraper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* margin: 0 auto; */
+  /* margin-left: 1.5rem;
+  margin-right: 1.5rem; */
+  gap: 2rem;
+}
+
+.cardWraper {
+  width: 290px;
+  background-color: #fafafc;
+  border-radius: 6px;
+}
+
+
+.imageWraper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.imageWraper img {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.cardBody {
+  padding: 1rem;
+}
+
+.cardBody>h5 {
+  margin-bottom: 1rem;
+  padding: 0px 1rem;
+}
+
+.cardBody>p {
+  
+  color: var(--black1);
+  font-size: 15px;
+  line-height: 1.25;
+  padding: 0px 1rem;
+  /* height: 200px; */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* Limit to 5 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Add ellipsis (...) at the end */
+  /* https://stackoverflow.com/questions/15292708/text-overflow-css-truncation */
+}
+
+.cardBody:hover>h5 {
+  text-decoration: underline;
+}
+
+
+.cardFooter {
+  padding: 0px 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardFooter .shareBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .newsPage {
+    padding-top: 100px;
+  }
+}

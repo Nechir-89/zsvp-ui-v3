@@ -1,0 +1,144 @@
+.header {
+  background-color: var(--black2);
+  padding: 32px 24px;
+  padding-top: 150px;
+  font-family: var(--open-sans-font);
+}
+
+.navAndShare {
+  display: flex;
+  justify-content: space-around;
+  color: var(--navy-blue);
+  font-weight: 550;
+}
+
+.navAndShare>div:hover {
+  color: var(--white);
+}
+
+.navAndShare>a:hover {
+  color: var(--white);
+}
+
+.tag {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 48px;
+}
+
+.tag span {
+  background-color: var(--gray);
+  letter-spacing: 4px;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-family: var(--source-sans-pro-font);
+  font-weight: 18px;
+
+}
+
+.header h4 {
+  text-align: center;
+  color: var(--white);
+  font-family: var(--open-sans-font);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.publishedDate {
+  text-align: center;
+  font-family: var(--open-sans-font);
+  color: var(--light-gray)
+}
+
+.publishedDate:hover {
+  color: var(--orange)
+}
+
+.body {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 24px;
+}
+
+.body p {
+  /* display: flex; */
+  /* margin: 0 auto; */
+  color: var(--black2);
+  max-width: 100ch;
+  padding: 1rem 0px;
+}
+
+.gallery {
+  max-width: 1030px;
+  margin: 0px auto;
+  padding: 24px;
+}
+
+.documents {
+  max-width: 1030px;
+  margin: 0px auto;
+  padding: 24px;
+}
+
+.documentList li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  column-gap: 2rem;
+}
+
+/* .documentList li::marker {} */
+
+.titleAndDesc p{
+  color: var(--black2);
+}
+
+.titleAndDesc .title{
+  color: var(--black2);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.titleAndDesc .desc{
+  color: var(--black2);
+  font-size: 14px;
+  padding-left: 1rem;
+}
+
+.btns{
+  display: flex;
+  column-gap: 1rem;
+}
+
+.btns span{
+  align-self: center;
+  padding: 0.25rem 1rem;
+  font-size: 14px;
+  letter-spacing: normal;
+}
+
+.btns span.downloadBtn{
+  background-color: var(--navy-blue);
+  color: var(--yellow);
+}
+
+.btns span.viewBtn{
+  background-color: var(--dark-purple);
+  color: var(--white);
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding-top: 116px;
+  }
+  .documentList li {
+    /* display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem; */
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}

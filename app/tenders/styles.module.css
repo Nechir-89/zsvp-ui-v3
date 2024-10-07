@@ -1,0 +1,101 @@
+.tendersPage {
+  padding-top: 140px;
+  padding-bottom: 3rem;
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.jobsPage .pageHeader {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.pageHeader span {
+  color: var(--navy-blue);
+}
+
+.tendersWraper {
+  margin-top: 1rem;
+}
+
+.tender{
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 4px;
+  color: var(--black1);
+  margin-bottom: 0.35rem;
+}
+
+p.body{
+  display: flex;
+  column-gap: 1rem;
+  color: var(--black1);
+  font-size: 14px;
+}
+
+/*
+.title h5 {
+  border-bottom: 4px solid var(--yellow);
+  margin-bottom: 10px;
+}
+
+.cardsWraper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 24px;
+  margin-right: 24px;
+  gap: 2rem;
+}
+
+.cardWraper {
+  flex-grow: 1;
+  min-width: 260px;
+  box-shadow: -3px -3px 7px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--light-gray-E6);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.cardWraper:hover {
+  box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.35);
+}
+
+.details{
+  margin-bottom: 16px;
+}
+
+.details p {
+  color: var(--gray);
+  font-size: 15px;
+}
+
+.details p>span {
+  color: var(--black1);
+  font-weight: 600;
+}
+
+.cardFooter {
+  text-align: right;
+  color: var(--gray);
+}
+
+.cardFooter>span {
+  display: block;
+  width: 100%;
+}
+
+.cardFooter:hover{
+  color: var(--black1);
+  cursor: pointer;
+} */
+
+@media only screen and (max-width: 600px) {
+  .tendersPage {
+    padding-top: 100px;
+  }
+}

@@ -1,0 +1,97 @@
+.jobPage {
+  padding-top: 140px;
+  padding-bottom: 3rem;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.nav {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h4 {
+  margin-bottom: 4px;
+}
+
+div.details {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 4px;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--yellow);
+  padding-bottom: 4px;
+}
+
+div.details p {
+  color: var(--gray);
+  font-size: 15px;
+}
+
+div.details p>span {
+  color: var(--black1);
+  font-weight: 600;
+}
+
+.body h1 {
+  font-size: 36px;
+  letter-spacing: normal;
+}
+
+.body h2 {
+  font-size: 26px;
+  letter-spacing: normal;
+}
+
+.body h3 {
+  font-size: 18px;
+  letter-spacing: normal;
+}
+
+.body h4 {
+  font-size: 12px;
+  letter-spacing: normal;
+}
+
+.body p {
+  color: var(--black2)
+}
+
+.body li {
+  color: var(--black2)
+}
+
+.body ul,
+.body ol {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.howToApply {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.howToApplyBody p {
+  color: var(--black2);
+}
+
+.links ol{
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.links ol>li a{
+  color: var(--black2);
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .jobPage {
+    padding-top: 100px;
+  }
+}

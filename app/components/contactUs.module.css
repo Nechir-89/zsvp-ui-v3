@@ -1,0 +1,139 @@
+.title {
+  color: var(--white);
+}
+
+.wrpaer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+}
+
+.subHeader {
+  color: var(--yellow);
+  font-family: var(--caveat-font);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-family: var(--poppins-font);
+  font-size: 1rem;
+}
+
+.bar {
+  display: block;
+  width: 100px;
+  height: 6px;
+  margin-top: 6px;
+  margin-bottom: 2rem;
+  background-color: var(--white);
+  border-radius: 0px 4px 4px 0px;
+}
+
+.contactusForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.inputWraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+}
+
+.inputWraper label {
+  color: var(--light-orange);
+  font-family: var(--source-sans-pro-font);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.inputWraper input,
+.inputWraper>textarea {
+  max-width: 100%;
+  height: 38px;
+  border: none;
+  border-radius: 4px;
+  padding: 0px 8px;
+  font-family: var(--open-sans-font);
+  font-size: 1rem;
+  font-weight: 550;
+  outline: none;
+}
+
+.fnWraper {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.lnWraper {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.emailWraper {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.messageWraper {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+
+.messageWraper>textarea {
+  padding: 8px;
+  height: 100px;
+  width: 100%;
+}
+
+.submitBtn {
+  cursor: pointer;
+}
+
+.submitBtnWraper {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.mapWraper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  border: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrpaer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subHeader {
+    margin-bottom: 0.5rem;
+    font-size: 36px;
+  }
+
+  .contactusForm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mapWraper iframe {
+    margin-top: 64px;
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 2rem;
+  }
+}

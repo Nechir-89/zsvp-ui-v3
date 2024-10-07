@@ -1,0 +1,161 @@
+.contentWraper {
+  max-width: 1122px;
+}
+
+.title {
+  margin-bottom: 28px;
+  color: var(--navy-blue);
+  text-align: left;
+}
+
+.cardsWraper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 35% 65%;
+  box-shadow: -7px -1px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
+}
+
+.card:hover {
+  box-shadow: -7px -1px 35px rgba(0, 0, 0, 0.35);
+}
+
+.card0 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.card1 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+
+.card2 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.card3 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+
+.imageWraper {
+  grid-column: 1/2;
+  position: relative;
+  border-radius: 3px;
+}
+
+.card .imageWraper {
+  height: 188px;
+}
+
+.textWraper {
+  grid-column: 2/3;
+  padding: 12px 12px 0px 12px;
+}
+
+.publisheDate {
+  font-family: var(--poppins-font);
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 12px;
+
+}
+
+.newsTitle {
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 500;
+  color: var(--black1);
+  margin-bottom: 4px;
+}
+
+div.newsExcerpt {
+  /* max-width: max-content;
+  overflow: hidden;
+  max-height: 54px; */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+div.newsExcerpt p {
+  font-size: 16px;
+  color: var(--gray);
+  letter-spacing: -0.2px;
+  word-spacing: normal;
+}
+
+.textWraper:nth-child(1)>div.newsExcerpt {
+  height: 220px;
+}
+
+.textWraper:nth-child(1) div.newsExcerpt p {
+  font-size: 16px;
+  color: var(--gray);
+  letter-spacing: -0.2px;
+  word-spacing: normal;
+}
+
+.textWraper:nth-child(1) .newsTitle {
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 500;
+  color: var(--black1);
+  margin-bottom: 8px;
+}
+
+.textWraper a:hover h4{
+  text-decoration: underline;
+}
+.footerBar {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.shareBtn svg {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.moreNewsBtn {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .cardsWraper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card {
+    /* display: grid;
+    grid-template-columns: 35% 65%;
+    box-shadow: -7px -1px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 3px; */
+  }
+
+  .card0 .imageWraper {
+    height: 188px;
+  }
+
+}

@@ -1,95 +1,53 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from './page.module.css'
+import HeroSection from './components/HeroSection'
+// import TestimonialSection from './components/TestimonialSection'
+import NewsSection from './components/NewsSection'
+import PartnersSection from './components/PartnersSection'
+import ContactUs from './components/ContactUs'
+import { getHomePage } from '@/utils/services/homePage'
+// import { getTestimonials } from '@/utils/services/testimonials'
+import { getSomeNews } from '@/utils/services/news'
+import { getPartners } from '@/utils/services/partners'
+import { Suspense } from 'react'
+import LoadingComponent from './components/LoadingComponent'
+import { openAlerts } from '@/utils/services/alerts'
 
-export default function Home() {
+export default async function Home() {
+  const homePageRes: Promise<HomePage> = getHomePage();
+  const alertPromise: Promise<Alerts> = openAlerts();
+
+  // const testimonials: Promise<Testimonials> = getTestimonials();
+  const news: Promise<AllNews> = getSomeNews(4);
+  const partners: Promise<Partners> = getPartners()
+
+  const homePage = await homePageRes
+  const alerts = await alertPromise
+  // console.log(homePageData)
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    <main>
+      <section className={`section ${styles.heroSection}`} style={{paddingTop: alerts.data.length == 0? '200px': '232px'}}>
+        <HeroSection data={homePage.data} />
+      </section>
+      {/* <section className={`section ${styles.testimonialSection}`}>
+        <Suspense fallback={<LoadingComponent />}>
+          <TestimonialSection promise={testimonials} />
+        </Suspense>
+      </section> */}
+      <section className={`section ${styles.newsSection}`}>
+        <Suspense fallback={<LoadingComponent />}>
+          <NewsSection promise={news} />
+        </Suspense>
+      </section>
+      <section className={`section ${styles.partnerSection}`}>
+        <Suspense fallback={<LoadingComponent />}>
+          <PartnersSection promise={partners} />
+        </Suspense>
+      </section>
+      <section className={`section ${styles.contactusSection}`}>
+        <ContactUs />
+      </section>
+    </main>
+  )
 }
+
+
