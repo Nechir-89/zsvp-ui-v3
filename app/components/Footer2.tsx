@@ -29,10 +29,10 @@ export default async function Footer2() {
         </Link>
       </div>
       {/* https://zsvp-backend.onrender.com */}
-      <iframe
+      {/* <iframe
         src="https://zsvp-backend.onrender.com/admin"
         style={{ display: 'none' }}
-      ></iframe>
+      ></iframe> */}
     </div>
   )
 }
