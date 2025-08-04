@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react'
 import styles from './header.module.css'
 import { Suspense } from 'react'
-import Alert from './Alert';
+// import Alert from './Alert';
 import HamburgerBtn from './hamburgerBtn/HamburgerBtn';
 import FlatNavbar from './FlatNavbar';
 
@@ -15,7 +15,7 @@ export default async function Navbar() {
   const content = (
     <header className={`${styles.header}`}>
       <Suspense>
-        <Alert />
+        {/* <Alert /> */}
       </Suspense>
       <nav className={styles.navigation}>
         <div className={styles.logo}>
