@@ -83,6 +83,34 @@ type Tenders = {
   error?: StrapiError;
 };
 
+type JobData = {
+  id: number;
+  attributes: {
+    title: string;
+    Location: string;
+    Type: string;
+    openDate: string;
+    closeDate: string;
+    positions: number;
+    textLang: string;
+    body: string;
+    howToApply: string;
+    links: Link[] | [];
+  };
+};
+
+type Job = {
+  data: JobData | null;
+  meta?: Meta | null;
+  error?: StrapiError;
+};
+
+type Jobs = {
+  data: JobData[] | null;
+  meta?: Meta | null;
+  error?: StrapiError;
+};
+
 type HomePageData = {
   id: number;
   attributes: {
@@ -272,27 +300,6 @@ type Link = {
   id: number;
   link: string;
   title: string;
-};
-
-type Job = {
-  id: number;
-  attributes: {
-    title: string;
-    Location: string;
-    Type: string;
-    openDate: string;
-    closeDate: string;
-    positions: number;
-    textLang: string;
-    body: string;
-    howToApply: string;
-    links: Link[] | [];
-  };
-};
-
-type Jobs = {
-  data: Job[] | [];
-  meta: Meta;
 };
 
 type Alert = {

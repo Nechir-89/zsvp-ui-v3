@@ -107,7 +107,7 @@ export default async function TenderPage({ params: { id } }: Props) {
   return (
     <section className={"noDataSection"} style={{ padding: "24px" }}>
       <h5>
-        We are sorry, an unknown error occurred while searching for the tender!
+        We are sorry, an UNKNOWN error occurred while searching for the tender!
       </h5>
       <Link href="/" style={{ textDecoration: "underline" }}>
         Go to Home
