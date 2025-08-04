@@ -44,8 +44,8 @@ type SocialMedia = {
 }
 
 type SocialMedias = {
-  data: SocialMedia[],
-  meta: Meta
+  data: SocialMedia[] | null,
+  meta: Meta | null
 }
 
 type HomePageData = {
