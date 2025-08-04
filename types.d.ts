@@ -1,298 +1,312 @@
 type Meta = {
   pagination: {
-    page: number,
-    pageSize: number,
-    pageCount: number,
-    total: number
-  }
-}
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
+  };
+};
+
+type StrapiError = {
+  status: number;
+  name: string;
+  message: string;
+  details: {};
+};
 
 type SocialMedia = {
-  id: number,
+  id: number;
   attributes: {
-    title: string,
-    link: string,
-    colorCode: string,
-    createdAt: string,
-    updatedAt: string,
-    publishedAt: string,
+    title: string;
+    link: string;
+    colorCode: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
     // for logos we are expecting to have only svg format images
     logo: {
       data: {
-        id: number,
+        id: number;
         attributes: {
-          name: string,
-          alternativeText: string,
-          caption: string,
-          width: number,
-          height: number,
-          formats: string,
-          hash: string,
-          ext: string,
-          mime: string,
-          size: number,
-          url: string,
-          previewUrl: string,
-          provider: string,
-          provider_metadata: string,
-          createdAt: string,
-          updatedAt: string,
-        }
-      }
-    }
-  }
-}
+          name: string;
+          alternativeText: string;
+          caption: string;
+          width: number;
+          height: number;
+          formats: string;
+          hash: string;
+          ext: string;
+          mime: string;
+          size: number;
+          url: string;
+          previewUrl: string;
+          provider: string;
+          provider_metadata: string;
+          createdAt: string;
+          updatedAt: string;
+        };
+      };
+    };
+  };
+};
 
 type SocialMedias = {
-  data: SocialMedia[] | null,
-  meta: Meta | null
-}
+  data: SocialMedia[] | null;
+  meta?: Meta | null;
+  error?: StrapiError;
+};
+
+type TenderData = {
+  id: number;
+  attributes: {
+    title: string;
+    openDate: string;
+    closeDate: string;
+    textLang: string;
+    body: string;
+    howToApply: string;
+    links: Link[] | [];
+  };
+};
+
+// for single tended object
+type Tender = {
+  data: TenderData | null;
+  meta?: Meta | null;
+  error?: StrapiError;
+};
+
+// array of tender objects
+type Tenders = {
+  data: TenderData[] | null;
+  meta?: Meta | null;
+  error?: StrapiError;
+};
 
 type HomePageData = {
-  id: number,
+  id: number;
   attributes: {
-    zsvpIntroductionText: string,
-    locale: string,
+    zsvpIntroductionText: string;
+    locale: string;
     Image: {
       data: {
-        id: number,
+        id: number;
         attributes: {
-          url: string
-        }
-      }[]
-    }
-  }
-}
+          url: string;
+        };
+      }[];
+    };
+  };
+};
 
 type HomePage = {
-  data: HomePageData
-}
+  data: HomePageData;
+};
 
 type Testimonial = {
-  id: number,
+  id: number;
   attributes: {
-    author: string,
-    positionAndCompany: string,
-    testimonial: string,
-    lang: string,
+    author: string;
+    positionAndCompany: string;
+    testimonial: string;
+    lang: string;
     image: {
       data: {
-        id: number,
+        id: number;
         attributes: {
-          alternativeText: string,
-          url: string
-        }
-      }
-    }
-  }
-
-}
+          alternativeText: string;
+          url: string;
+        };
+      };
+    };
+  };
+};
 
 type Testimonials = {
-  data: Testimonial[],
-
-}
+  data: Testimonial[];
+};
 
 type NewsDocument = {
-  id: number,
-  link: string,
-  doc_title: string,
-  doc_desc: string,
+  id: number;
+  link: string;
+  doc_title: string;
+  doc_desc: string;
   docs: {
     data: {
-      id: number,
+      id: number;
       attributes: {
-        url: string,
-      }
-    }
-  }
-}
+        url: string;
+      };
+    };
+  };
+};
 
 type NewsPhoto = {
-  id: number,
+  id: number;
   attributes: {
-    alternativeText: string,
-    url: string,
-    width: number,
-    height: number
-  }
-}
+    alternativeText: string;
+    url: string;
+    width: number;
+    height: number;
+  };
+};
 
 type NewsPhotos = {
-  data: NewsPhoto[] | null
-}
+  data: NewsPhoto[] | null;
+};
 
 type News = {
-  id: number,
+  id: number;
   attributes: {
-    title: string,
-    newsExcerpt: string,
-    news: string,
-    lang: string
-    publishedAt: string,
-    customPublishedDate: string,
+    title: string;
+    newsExcerpt: string;
+    news: string;
+    lang: string;
+    publishedAt: string;
+    customPublishedDate: string;
     featuredImage: {
       data: {
-        id: number,
+        id: number;
         attributes: {
-          alternativeText: string,
-          url: string,
-        }
-      }
-    },
-    photos?: NewsPhotos,
-    documents?: NewsDocument[] | []
-  }
-}
+          alternativeText: string;
+          url: string;
+        };
+      };
+    };
+    photos?: NewsPhotos;
+    documents?: NewsDocument[] | [];
+  };
+};
 
 type AllNews = {
-  data: News[] | []
-}
+  data: News[] | [];
+};
 
 type Partners = {
   data: {
-    id: number,
+    id: number;
     attributes: {
       logo: {
         data: {
-          id: number,
+          id: number;
           attributes: {
-            alternativeText: string,
-            url: string
-          }
-        }
-      }
-    }
-  }[]
-}
+            alternativeText: string;
+            url: string;
+          };
+        };
+      };
+    };
+  }[];
+};
 
 type Contacts = {
   data: {
-    id: number,
+    id: number;
     attributes: {
-      type: string,
-      value: string,
+      type: string;
+      value: string;
       icon: {
         data: {
-          id: number,
+          id: number;
           attributes: {
-            alternativeText: string,
-            url: string
-          }
-        }
-      }
-    }
-  }[]
-}
+            alternativeText: string;
+            url: string;
+          };
+        };
+      };
+    };
+  }[];
+};
 
 type ZSVPLocation = {
   data: {
-    id: number,
+    id: number;
     attributes: {
-      url: string,
+      url: string;
       icon: {
         data: {
-          id: number,
+          id: number;
           attributes: {
-            alternativeText: string,
-            url: string
-          }
-        }
-      }
-    }
-  }
-}
+            alternativeText: string;
+            url: string;
+          };
+        };
+      };
+    };
+  };
+};
 
 type ApplicationDevelopmentDetails = {
   data: {
-    id: number,
+    id: number;
     attributes: {
-      name: string,
-      link: string,
-      color: string,
+      name: string;
+      link: string;
+      color: string;
       logo: {
         data: {
-          id: number,
+          id: number;
           attributes: {
-            alternativeText: string,
-            url: string
-          }
-        }
-      }
-    }
-  },
-}
+            alternativeText: string;
+            url: string;
+          };
+        };
+      };
+    };
+  };
+};
 
 type AboutItem = {
-  id: number,
+  id: number;
   attributes: {
-    title: string,
-    body: string
-  }
-}
+    title: string;
+    body: string;
+  };
+};
 
 type AboutItems = {
-  data: AboutItem[]
-}
+  data: AboutItem[];
+};
 
 type Link = {
-  id: number,
-  link: string,
-  title: string,
-}
+  id: number;
+  link: string;
+  title: string;
+};
 
 type Job = {
-  id: number,
+  id: number;
   attributes: {
-    title: string,
-    Location: string,
-    Type: string,
-    openDate: string,
-    closeDate: string,
-    positions: number,
-    textLang: string,
-    body: string,
-    howToApply: string,
-    links: Link[] | []
-  }
-}
+    title: string;
+    Location: string;
+    Type: string;
+    openDate: string;
+    closeDate: string;
+    positions: number;
+    textLang: string;
+    body: string;
+    howToApply: string;
+    links: Link[] | [];
+  };
+};
 
 type Jobs = {
-  data: Job[] | [],
-  meta: Meta
-}
-
-
-type Tender = {
-  id: number,
-  attributes: {
-    title: string,
-    openDate: string,
-    closeDate: string,
-    textLang: string,
-    body: string,
-    howToApply: string,
-    links: Link[] | []
-  }
-}
-
-type Tenders = {
-  data: Tender[] | [],
-  meta: Meta
-}
+  data: Job[] | [];
+  meta: Meta;
+};
 
 type Alert = {
-  id: number,
+  id: number;
   attributes: {
-    title: string,
-    type: string,
-    text: string,
-    active: boolean,
-    lang: string,
-  }
-}
+    title: string;
+    type: string;
+    text: string;
+    active: boolean;
+    lang: string;
+  };
+};
 
 type Alerts = {
-  data: Alert[] | [],
-  meta: Meta
-}
+  data: Alert[] | [];
+  meta: Meta;
+};
